@@ -1,0 +1,528 @@
+#preloader {
+position:fixed;
+top:0;left:0;
+right:0;
+bottom:0;
+background-color:rgba(68,158,185,.7);
+z-index:99
+}
+
+body{
+/*background-image: url("../img/bg.jpg");*/
+background:#d7d7d7;
+}
+.textB {
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+}
+.text-black {
+    color: #000;
+    font-weight: normal;
+}
+.light{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+}
+.light2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+    border-radius: 15px;
+}
+.textB {
+    font-family: Arial;
+    font-size: 16px;
+}
+#status {
+width:200px;
+height:200px;
+position:absolute;
+left:50%;
+top:50%;
+background-repeat:no-repeat;
+background-position:center;
+margin:-120px 0 0 -120px
+}
+#error-message {
+    background-color:#dc3545;
+    color:#eaeaea;
+    height:35px;
+    padding-top:5px;
+}
+#top-message{
+    background-color:#449eb9;
+    border-bottom:2px solid rgba(0,0,0,.2);
+    color:#f8f9fa;
+    padding:4px 1px 4px 0
+}
+#header-index{
+    background:url() repeat-x #ffeef1;
+    padding-top:20px;
+    padding-bottom:25px
+}
+#register-form{
+    
+}
+#header-home{
+    background:url() left 49% repeat-x #7fa51c
+}
+#logo{
+    background:url();
+    width:202px;
+    height:69px;
+    margin:5px 4px 4px 0;
+    float:left
+}
+#users-on{
+    background:url() 7px 4px no-repeat,rgba(0,0,0,.5);
+    color:#fff;
+    padding-top:4px;
+    padding-left:26px;
+    padding-right:10px;
+    margin-top:33px;
+    height:27px;
+    font-size:13px
+}
+.principal-title{
+    font-family:ubuntu condensed,sans-serif;
+    font-size:35px;
+    color: #003875
+}
+.secondary-title{
+    font-family:ubuntu condensed,sans-serif;
+    font-size:30px;
+    text-transform:uppercase;
+    color:#fff
+}
+.big-input{
+    position:relative;
+    margin-bottom:10px;
+    height:45px
+}
+.big-input-box{
+    position:relative;
+    width:100%;
+    height:45px;
+    background:#fff;
+    border:0;
+    color:#252525;
+    font-size:20px;
+    padding-left:50px;
+    -webkit-box-sizing:
+    border-box;-moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.username{
+    position:absolute;
+    height:37px;
+    width:35px;
+    background:url() -2px -1px;
+    top:4px;
+    left:8px;
+    z-index:2
+}
+.email{
+    position:absolute;
+    height:37px;
+    width:35px;
+    background:url() -154px -2px;
+    top:4px;
+    left:8px;
+    z-index:2
+}
+.password{
+    position:absolute;
+    height:37px;
+    width:35px;
+    background:url() -113px -1px;
+    top:4px;
+    left:8px;
+    z-index:2
+}
+.recaptcha-box{
+    background:#f9f9f9;
+    text-align:center
+}
+#before-recaptcha{
+    display:inline-block;
+    overflow:hidden;
+    width:290px;
+    height:74px;
+    text-align:left
+}
+.g-recaptcha{
+    position:relative;
+    left:-10px
+}
+#login-button{}
+#fb-login-button{
+    width:100%;
+    font-weight:lighter
+}
+#slider-index{
+    margin-top:10px
+}
+#slider-home{
+    margin-top:10px
+}
+.carousel-caption{
+    left:8%;
+    top:18px;
+    text-align:left
+}
+.carousel-caption h5{
+    font-family:ubuntu condensed,sans-serif;
+    font-size:33px
+}
+.navbar-icon{
+    float:left;
+    width:45px;
+    height:38px;
+    margin-top:-5px;
+    margin-left:-10px;
+    background-position:center center;
+    background-repeat:no-repeat
+}
+.navbar-nav>li{
+    border-right:2px solid rgba(167,167,167,.2);
+    padding:0 5px;
+    font-size:19px;
+    font-family:ubuntu condensed,sans-serif;
+    text-transform:uppercase
+}
+.navbar-nav>li:first-child{
+    padding-left:0
+}
+.navbar-nav>li:last-child{
+    border:none
+}
+#middle-index{
+   background:-webkit-linear-gradient(10deg,#449eb9 42%,rgba(255,255,255,0) 40%)
+   ,url() left bottom
+}
+#register-message{
+    background:rgba(0,0,0,.5);
+    padding:1px 11px;
+    color:#fff;
+    text-align:center;
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:7px
+}
+#register-button{
+    margin-bottom:10px
+}
+#section-index{
+    background:#eaeaea;
+    padding-top:6px;
+    padding-bottom:20px;
+    border-top:2px solid #99c3cf
+}
+#section-home{
+    padding-top:6px;
+    padding-bottom:20px;
+    border-top:2px solid #d5d5d5
+}
+#room-top{
+    font-size:13px
+}
+.room-top-image{
+    float:left;
+    width:32px;
+    height:32px;
+    margin-right:14px;
+    margin-left:-5px
+}
+#last-registered{
+    font-size:14px
+}
+.last-registered-avatar{
+    background:url();
+    width:33px;
+    height:56px;
+    float:left;
+    margin-right:8px;
+    margin-left:-5px;
+    margin-top:-10px
+}
+#user-info{
+    background:url(//static.hartico.com/c_images/catalogue/left19.png) -90px 
+    bottom no-repeat,url(//static.hartico.com/c_images/catalogue/gradient19.png)
+    0% 75% repeat-x,#fff;
+    border-radius:3px;
+    overflow:hidden;
+    display:table;
+    width:100%;
+    height:100%
+}
+#user-avatar{
+    float:left
+}
+#user-data{
+    margin-top:5px;
+    margin-right:15px
+}
+#username{
+    font-family:ubuntu condensed,sans-serif;
+    font-size:45px;
+    color:#fff
+}
+#motto{
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    margin-bottom:15px
+}
+#last-articles .list-group-item{
+    padding:.4rem 1.1rem
+}
+#last-articles .list-group-item a{
+    color:#535353;text-decoration:none
+}
+.user-box{display:flex;
+         background:#fff;
+         border-radius:3px;
+         margin-bottom:5px
+}
+.user-box .user-img{
+    background-position:-11px -14px;
+    width:45px;
+    height:48px;
+    margin-left:5px
+}
+.user-box .user-info{
+    width:100%;
+    float:right;
+    padding:13px 18px 0 15px
+}
+footer{
+    background:#fff
+}
+
+.form-control {
+    font-size: 14px;
+}
+.cuerpo {
+    background: #f8f9fa !important;
+    width: 95%;
+    padding: 2%;
+    margin-top: 1%;
+}
+.borde{
+    border: 3px;
+    border-radius: 5px;
+}
+a {
+   color:#000;
+   text-decoration: none;
+}
+a:hover {
+   color:#0074ff;
+   text-decoration: none;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 55px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #fefefe;
+}
+
+/* Modal Content */
+.modal-content {
+  z-index: 3;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  z-index: 3;
+  padding: 2px 16px;
+  background-color: #003875;
+  color: white;
+}
+
+.modal-body {
+    z-index: 3;
+    padding: 2px 16px;
+}
+
+.modal-footer {
+  z-index: 3;
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.list-group-item.activo {
+    color: #fff;
+    background-color: #003875;
+    border-color: #003875;
+}
+.btn-primary {
+    color: #fff;
+    background-color:  #003875;
+    border-color:  #003875;
+}
+.aprovada{
+    color: #fff;
+    background: #00ae14;
+}
+.proceso{
+    color: #fff;
+    background: #f2b300;
+}
+.cancelada{
+    color: #fff;
+    background: #f20000;
+}
+
+/* Modal Content */
+.modal-conten {
+  z-index: 3;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/*============ Paginador =============*/
+.paginador ul{
+	padding: 15px;
+	list-style: none;
+	background: #FFF;
+	margin-top: 15px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+.paginador a, .pageSelected{
+	color: #428bca;
+	border: 1px solid #ddd;
+	padding: 5px;
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	width: 35px;
+}
+.paginador a:hover{
+	background: #ddd;
+}
+.pageSelected{
+	color: #FFF;
+	background: #428bca;
+	border: 1px solid #428bca;
+}
+.table .thead-blue th {
+    color: #fff;
+    background-color: #003875;
+    border-color: #003875;
+        border-top-color: rgb(0, 56, 117);
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 40px;
+}
+footer {
+  background-color: #f8f9fa !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: black;
+  text-align: right;
+  vertical-align: 15px;
+}
+.table{
+    color:#000;
+}
+.dropdown-menu{
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+}
+.ph-center::-webkit-input-placeholder {
+  text-align: center;
+  line-height: 100px;
+}

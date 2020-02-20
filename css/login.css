@@ -1,0 +1,38 @@
+body{
+   background: url("../img/bg.jpg") no-repeat center top;
+   
+}
+.menuLogin{
+   
+   min-height: 50px;
+   max-width: 500px;
+   text-align: center;
+   background:  #762126;
+   border-radius: 6px;
+   margin: 0 auto; 
+   margin-top: 100px;
+   padding-top: 5px;
+      
+}
+
+.login{
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 2%;
+    width: 65%;
+    min-width: 300px;
+    min-height: 50%;
+    margin: 15% 58%;
+    padding: 2%;
+    border: 2px solid #ccc;
+    /* IMPORTANTE */
+    text-align: center;
+}
+
+.espacio{
+    margin-top: 10%;
+}
+
+#inicioSesion{
+    color: black;
+}
+
