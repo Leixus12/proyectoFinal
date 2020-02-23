@@ -68,6 +68,10 @@
     }
     
     
+    /**
+     * Metodo para actualizar una contraseña cuando esta sea olvidada.
+     */
+    
     function inserCode(){
         $pdo = new conexion();
         $query = $pdo->prepare("INSERT INTO password (codigo, timeNew, timeEnd, "

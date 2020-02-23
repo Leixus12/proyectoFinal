@@ -81,6 +81,13 @@
     }
 
     
+    /**
+     * Creación de la nomina por metodo de almacenado desde la base de datos.
+     * @param $id numero de la nomina  generar.
+     * @param $fechaIni fecha donde inicia el periodo para crear nomina.
+     * @param $fechaFin fecha donde fin el periodo para crear nomina.
+     * @param $idEmpleado numero de empleado al cual se le creara la nomina.
+     */
     
     function crearNom($id, $fechaIni, $fechaFin, $idEmpleado){
         $pdo = new conexion();
@@ -90,6 +97,11 @@
     }
     
     
+    /**
+     * consultar los datos de la nomina 
+     * @param $idNomina numero de nomina para consultar los datos
+     * correspondientes
+     */
     function datosNomina($idNomina){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM nomina WHERE idNomina = '"
@@ -107,7 +119,14 @@
         }
     }
     
-    
+    /**
+     * Metodo para cargar una tabla con paginación con las nominas por empleado
+     * @param $idEmpleado numero de empleado
+     * @param $pagina cantidad de datos para filtrar en una tabla.
+     * @param $link enlace al cual se redireccionara mediante un boton
+     * @return regresa una tabla con los datos pedidos en html.
+     * 
+     */
     function nominaE($idEmpleado, $pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro FROM"
@@ -149,6 +168,16 @@
     }
     
     
+        
+    /**
+     * Metodo para cargar una tabla con paginación con las nominas de todos los
+     * empleados metodo usado en panel de administracion
+     * @param $idEmpleado numero de empleado
+     * @param $pagina cantidad de datos para filtrar en una tabla.
+     * @param $link enlace al cual se redireccionara mediante un boton
+     * @return regresa una tabla con los datos pedidos en html.
+     * 
+     */
     function nominaT($pagina, $link){
         
         $pdo = new conexion();

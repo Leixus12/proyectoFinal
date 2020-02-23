@@ -9,17 +9,23 @@ $asistencia = new asistencia();
 if(isset($_SESSION['valido'])==1){
     
 if(!isset($_GET['q'])){
-    $q="";
+    $q=""; //nombre
 } else {
     $q=$_GET["q"];
 }
 if(!isset($_GET['f'])){
-    $f="";
+    $f=""; // fecha
 } else {
     $f=$_GET["f"];
 }
  
 $pdo = new conexion();
+
+
+/**
+ * Se realiza la busqueda de asistencias en la base de datos y se realiza un
+ * join.
+ */
 if(!empty($f) && !empty($q) ){
     $query = $pdo ->prepare("SELECT a.idAsistencia, a.Fecha, a.HoraEntrada, "
             . "a.HoraSalida, e.nombre, e.apellidoPaterno, e.apellidoMaterno "
@@ -58,6 +64,12 @@ foreach ($res as $value) {
     $apellidoM[$cont]=$value['apellidoMaterno'];
 }
 
+
+
+/**
+ * valida si los campos de busqueda no estan vacios si no estan vacios filtra
+ * las consultas por los datos recibidos.
+ */
 if (strlen($q) > 0 && strlen($f) > 0){
   $hint="";
   for($i=1; $i <= $cont ; $i++){

@@ -47,7 +47,10 @@ class turno {
         $this->horaSalida = $horaSalida;
     }
 
-    
+     /**
+     * consulta los turnos disponibles
+     * @return regresa un select en html
+     */
     function turnodisp(){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM turno;");

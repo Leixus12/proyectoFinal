@@ -37,6 +37,10 @@ class sucursal {
     }
 
     
+    /**
+     * consulta las sucursales disponibles
+     * @return regresa un select en html
+     */
     function sucDisp(){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM sucursal;");

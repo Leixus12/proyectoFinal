@@ -69,7 +69,10 @@ class percepciones {
         $this->montoPercepciones = $montoPercepciones;
     }
 
-    
+    /**
+     * Consulta las perciciones por cada nomina mendiante su numero
+     * @param $idNom numera de nomina
+     */
     function datosPer($idNom){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM percepciones WHERE idNomina = '".$idNom."';");

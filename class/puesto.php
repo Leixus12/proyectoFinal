@@ -48,6 +48,10 @@ class puesto {
     }
 
     
+    /**
+     * Consulta los puestos disponibles para generar un select en html
+     * @return regresa un select con los datos consultados.
+     */
     function puestosDisp(){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM puesto;");
@@ -69,6 +73,12 @@ class puesto {
     }
     
     
+    /**
+     * consulta los puestos disponibles para generar una tabla con paginacion
+     * de los puestos disponibles 
+     * @param $pagina recibe en numero de pagina para filtrar los datos
+     * @param $link recibe la direccion para realizar acciones mediante un boton
+     */
     function puestoT($pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro FROM puesto;");
@@ -101,6 +111,10 @@ class puesto {
     }
     
     
+    /**
+     * metodo para consultar los datos por puesto
+     * @param $idPuesto numero de puesto para buscar sus datos correspondientes
+     */
     function puestoDatos($idPuesto){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM puesto WHERE idPuesto = $idPuesto;");
@@ -116,6 +130,11 @@ class puesto {
     }
     
     
+    /**
+     * actualizar los datos del puesto
+     * @param $idPuesto numero de puesto
+     * 
+     */
     function actPuestoDatos($idPuesto){
         $pdo = new conexion();
         $query = $pdo->prepare("UPDATE puesto"
@@ -130,7 +149,9 @@ class puesto {
         
     }
     
-    
+    /**
+     * creacion de puestos
+     */
     function crearPuesto(){
         $pdo = new conexion();
         $query = $pdo ->prepare("INSERT INTO `puesto` (`nombrePuest`, `descripcion`, `salarioDia`) VALUES ("
