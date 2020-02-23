@@ -37,6 +37,10 @@ class departamento {
     }
     
     
+    /**
+     * Consulta los departamentos disponibles de la base de tatos
+     * @return regresa un select con las sucursales disponibles en html
+     */
     function departDisp(){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM departamento;");

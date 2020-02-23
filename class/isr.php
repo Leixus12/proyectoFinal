@@ -37,6 +37,15 @@ class isr {
     }
 
     
+    /**
+     * Filtrar cantidad de datos por tabla.
+     * @param $pagina cantidad de datos que va consultar sobre la base de datos
+     * para asi poder hacer la paginacion en la tabla.
+     * @param $link enlace a donde mandara para realizar acciones sobre el dato
+     * consultado.
+     * @return regresa el codigo de la tabla en html con los datos previos de la
+     * base de datos
+     */
     function isrT($pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro FROM "
@@ -72,6 +81,11 @@ class isr {
     }
     
     
+    /**
+     * Consulta los datos de la tabla isr y los almacena mediante objetos para 
+     * cuando se genera la nomina hacer las deducciones correspodientes mediante
+     * el salario base.
+     */
     function datosIsr($idIsr){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM isr WHERE idISR = $idIsr;");
@@ -86,6 +100,10 @@ class isr {
     }
     
     
+    /**
+     * Metodo para actualizar los porcentajes de descuento en base a la cantidad
+     * que proporciona el sat
+     */
     function actISR($idIsr){
         $pdo = new conexion();
         $query = $pdo ->prepare("UPDATE isr "

@@ -10,6 +10,11 @@ class conexion extends PDO{
     private $password = '';
     private $puerto='3308';
     
+    /**
+     * Se inicializa el constructor de la clase para realizar la conexion hacia
+     * la base de datos.
+     */
+    
     
     public function __construct() {
         try {

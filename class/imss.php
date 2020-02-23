@@ -1,42 +1,57 @@
 <?php
 class imss {
+    
+    
     private $idImss;
     private $clase;
     private $porcentajeE;
     private $porcentajeP;
     
+    
     function getIdImss() {
         return $this->idImss;
     }
 
+    
     function getClase() {
         return $this->clase;
     }
 
+    
     function getPorcentajeE() {
         return $this->porcentajeE;
     }
 
+    
     function getPorcentajeP() {
         return $this->porcentajeP;
     }
 
+    
     function setIdImss($idImss) {
         $this->idImss = $idImss;
     }
 
+    
     function setClase($clase) {
         $this->clase = $clase;
     }
 
+    
     function setPorcentajeE($porcentajeE) {
         $this->porcentajeE = $porcentajeE;
     }
 
+    
     function setPorcentajeP($porcentajeP) {
         $this->porcentajeP = $porcentajeP;
     }
-
+    
+    
+    /**
+     * Metodo para seleccionar los tipos de clase disponibles en el imss 
+     * @return regresa un select con las clases dispobibles en codigo html
+     */
     function imssDisp(){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT * FROM imssclass;");

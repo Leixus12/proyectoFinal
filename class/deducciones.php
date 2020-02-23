@@ -58,7 +58,11 @@ class deducciones {
         $this->montoDeducciones = $montoDeducciones;
     }
     
-    
+    /**
+     * consulta los datos de la base de datos para actualizar la clase con los
+     * datos correspondientes a las deducciones
+     * @param $idNom ingresa el numero de la nomina para consultar
+     */
     function datosDec($idNom){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM deducciones WHERE idNomina = '".

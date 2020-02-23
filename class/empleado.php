@@ -291,6 +291,9 @@ class empleado {
     }
     
     
+    /**
+     * Metodo que da de alta al empleado.
+     */
     function altaUsuario(){
         $pdo = new conexion();
         $query = $pdo->prepare("INSERT INTO `empleado` (`nombre`, 
@@ -319,6 +322,11 @@ class empleado {
     }
     
     
+    /**
+     * Metodo para consultar los datos del empleado
+     * @param $idEmpleado Recibe el numero del empleado para consultar sus datos
+     * respectivos.
+     */
     function consultaDatos ($idEmpleado){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM empleado where idEmpleado =".
@@ -349,6 +357,10 @@ class empleado {
     }
     
     
+    /**
+     * Filtra los datos laborares del empleado por su numero del cliente
+     * @param $idEmpleado Numero de empleado para filtrar su informacion laboral
+     */
     function DatosLabores($idEmpleado){
         $pdo = new conexion();
         $query = $pdo->prepare("select s.nomSucursal, s.direccionSucursal from "
@@ -389,6 +401,10 @@ class empleado {
     }
     
     
+    /**
+     * Metodo que actualiza los datos del empleado
+     * @param $idEmpleado como parametro el numero de empleado para actualizar sus datos
+     */
     function actDatos($idEmpleado){
         $pdo= new conexion();
         $query = $pdo->prepare("Update empleado"
@@ -404,6 +420,12 @@ class empleado {
     }
     
     
+    /**
+     * Metodo para hacer la paginacion por empleado mediante una tabla
+     * @param $pagina cantidad de datos para realizar la consulta y filtrar los
+     * datos
+     * @param $link pagina a la cual le dara efecto de redireccion por un boton
+     */
     function empleadoT($pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro FROM "

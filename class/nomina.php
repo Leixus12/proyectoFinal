@@ -81,6 +81,7 @@
     }
 
     
+    
     function crearNom($id, $fechaIni, $fechaFin, $idEmpleado){
         $pdo = new conexion();
         $query = $pdo->prepare("call generar_nom ('".$id."', '".$fechaIni

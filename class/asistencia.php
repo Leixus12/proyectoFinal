@@ -1,51 +1,81 @@
 <?php
 class asistencia {
+    
+    
     private $idAsistencia;
     private $fecha;
     private $horaEntrada;
     private $horaSalida;
     private $idEmpleado;
     
+    
+    
     function getIdAsistencia() {
         return $this->idAsistencia;
     }
 
+    
+    
     function getFecha() {
         return $this->fecha;
     }
 
+    
+    
     function getHoraEntrada() {
         return $this->horaEntrada;
     }
 
+    
+    
     function getHoraSalida() {
         return $this->horaSalida;
     }
 
+    
+    
     function getIdEmpleado() {
         return $this->idEmpleado;
     }
 
+    
+    
     function setIdAsistencia($idAsistencia) {
         $this->idAsistencia = $idAsistencia;
     }
 
+    
+    
     function setFecha($fecha) {
         $this->fecha = $fecha;
     }
 
+    
+    
     function setHoraEntrada($horaEntrada) {
         $this->horaEntrada = $horaEntrada;
     }
 
+    
     function setHoraSalida($horaSalida) {
         $this->horaSalida = $horaSalida;
     }
 
+    
     function setIdEmpleado($idEmpleado) {
         $this->idEmpleado = $idEmpleado;
     }
     
+    
+    /**
+     * Se registra la asistencia por empleado con un procedimiento de almacenado
+     * en la base de datos.
+     * @param $fechaN se ingresa la fecha que se registrara
+     * @param $horaEntradaN recibe la hora de entrada
+     * @param $horaSalidaN recibe la hora en que salio.
+     * @param $idEmpleadoN Recibe en numero de empleado que va a registrarle la
+     * asistencia
+     */
     function reg_asistencia($fechaN,$horaEntradaN,$horaSalidaN,$idEmpleadoN){
         $pdo= new conexion();
         $query = $pdo->prepare("call reg_asistencia("
@@ -55,6 +85,15 @@ class asistencia {
                 .$idEmpleadoN.");");
         $query->execute();
     }
+    
+    
+    /**
+     * obtiene las horas del empleado
+     * @param $idEmpleado recibe el id de un empleado
+     * @param $fechaIni recibe una fecha de inicio para calcular las horas extra
+     * @param $fechaFin recibe una fecha de fin para calcular las horas extra
+     * @return regresa la cantidad de horas extras acumuladas por el empleado
+     */
     function horasExtra($idEmpleado, $fechaIni, $fechaFin){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT SUM(horaExtra) FROM asistencia WHERE "
@@ -64,6 +103,13 @@ class asistencia {
         $res = $query->fetchColumn();
         return $res;
     }
+    
+    
+    /**
+     * Metodo para realizar la paginacion de las asistencias
+     * @param $pagina recibe el numero max de resultados que tendra por pagina
+     * @param $link recibe a que pagina redireccionara
+     */
     function asistenciaT($pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro FROM "
@@ -109,6 +155,11 @@ class asistencia {
                                 
         } return "</tbody>".$cuerpo;
     }
+    
+    /**
+     * Realiza la consulta sobre las asistenicas
+     * @param $idAsis recibe el numero para consultar sus datos correspondientes
+     */
     function datosAsis($idAsis){
         $pdo = new conexion();
         $query = $pdo ->prepare("SELECT a.idAsistencia, a.Fecha, a.HoraEntrada,"
@@ -126,6 +177,11 @@ class asistencia {
             $value['apellidoMaterno']." ".$value['nombre'];
         }
     }
+    
+    
+    /**
+     * Realiza la actualizacion de una asistencia mediante su numero.
+     */
     function actDatos(){
         $pdo = new conexion();
         $query= $pdo->prepare("UPDATE asistencia SET"
