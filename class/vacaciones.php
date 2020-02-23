@@ -69,7 +69,10 @@ class vacaciones {
         $this->idEmpleado = $idEmpleado;
     }
     
-    
+    /**
+     * Crear una nueva solicitud de vacaciones por empleado
+     * @param $idEmpleado numero de empleado al cual realiza la solicitud
+     */
     function solicita($idEmpleado){
         $pdo = new conexion();
         $query = $pdo ->prepare("INSERT INTO vacaciones (FechaInicial, "
@@ -82,7 +85,10 @@ class vacaciones {
         $query ->execute();
     }
     
-    
+    /**
+     * consulta las solicitudes realizadas por el empleado
+     * @param $idEmpleado numero del empleado
+     */
     function solicitudes ($idEmpleado){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM vacaciones where Estado "
@@ -116,7 +122,12 @@ class vacaciones {
         
     }
     
-    
+    /**
+     * Consulta las solicitudes aprovadas para el empleado
+     * @param $idEmpleado numero del empleado para filtrar sus solicitudes
+     * @return regresa una tabla en html con los datos correspondientes a al 
+     * numero de empleado
+     */
     function solicitudAprobada ($idEmpleado){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT * FROM vacaciones where idEmpleado = "
@@ -154,6 +165,13 @@ class vacaciones {
     }
     
     
+    /**
+     * Consulta los dias de vacacionales del empleado mediante la fecha de 
+     * ingreso
+     * @param $idEmpleado numero de empleado para consultar sus vacaciones
+     * @param $diasVacaciones  numero de dias de la solicitud
+     * @return regresa el numero de dias disponibles
+     */
     function diasP($idEmpleado, $diasVacaciones){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT SUM(cantidad) 'Total' FROM vacaciones "
@@ -171,6 +189,9 @@ class vacaciones {
     }
     
     
+    /**
+     * 
+     */
     function vacacionesT($pagina, $link){
         $pdo = new conexion();
 	$sql_registe = $pdo->prepare("SELECT COUNT(*) as total_registro "
