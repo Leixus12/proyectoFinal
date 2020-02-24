@@ -4,6 +4,11 @@ include '../class/empleado.php';
 include '../class/conexion.php';
 $empleado = new empleado();
 
+/**
+ * Actualizar los datos correspondientes al empleado desde el panel de
+ * administración
+ * 
+ */
 if(isset($_POST['actEmpleado'])){
     $empleado->setEmail($_POST['email']);
     $empleado->setDireccion($_POST['direccionE']);

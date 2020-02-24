@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Validacion para modificar la asistecia desde el panel de adminsitracion
+ */
  include '../class/asistencia.php';
  include '../addons/config.php';
  include '../class/conexion.php';

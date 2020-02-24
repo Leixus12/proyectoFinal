@@ -2,10 +2,12 @@
 
 
 include '../class/conexion.php';
-
-
 $nombre = $_GET['q'];
 
+/**
+ * mantiene los datos actualizados del empleado en tiempo real y si el usuario
+ * tiene permisos de administrador
+ */
 
 $pdo = new conexion();
 $query = $pdo ->prepare("SELECT nombreUsuario FROM empleado WHERE nombreUsuario"

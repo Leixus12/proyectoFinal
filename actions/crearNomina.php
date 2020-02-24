@@ -22,6 +22,15 @@ include '../class/puesto.php';
 
 $nomina2 = new nomina();
 
+
+
+/**
+ * Se hace creacion de la nomina el uso de libreria PHPMailer para envio de 
+ * correo electronico, tambien la libreria de Qr, y PDF
+ * primero se genera el contenido en un html para comvertirlo en pdf, el 
+ * siguiente paso es el envio por correo a cada empleado de la nomina
+ */
+
 if($_SESSION['valido']==1 && $_SESSION['idPuesto']== 1 || $_SESSION['idPuesto'] 
     == 6 ){
     $randomS = $random_string = chr(rand(65,90)) . chr(rand(65,90)) . 

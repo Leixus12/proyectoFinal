@@ -190,7 +190,12 @@ class vacaciones {
     
     
     /**
-     * 
+     * Consulta de las vacaciones solicitadas en el sistema mediante una tabla 
+     * en html.
+     * @param $pagina numero de pagina para aplicar un limit y consultar una 
+     * cierta cantidad de datos.
+     * @param $link redirreción de enlace a donde se modificar la solicitud.
+     * @return codigo html con los datos limitados por pagina.
      */
     function vacacionesT($pagina, $link){
         $pdo = new conexion();
@@ -243,6 +248,10 @@ class vacaciones {
     }
     
     
+    /**
+     * Consulta de los datos de las vacaciones
+     * @param $idVacaciones numero de solicitud para consultar sus datos
+     */
     function datosVac($idVacaciones){
         $pdo = new conexion();
         $query = $pdo->prepare("SELECT v.idVacation, v.FechaInicial, "
@@ -265,6 +274,10 @@ class vacaciones {
     }
     
     
+    /**
+     * Actualizar la solicitud de las vacaciones para modificar el estado de la 
+     * misma
+     */
     function actVac(){
         $pdo= new conexion();
         $query = $pdo ->prepare("UPDATE vacaciones"

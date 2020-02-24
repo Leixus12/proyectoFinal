@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -5,18 +6,26 @@ include '../class/conexion.php';
 include '../addons/config.php';
 include '../class/vacaciones.php';
 
+
+/**
+ * Se hace usa de Ajax para modificar las varibales q y f
+ * mediante una paginacion de elementos delimitados para evitar la sobre carga
+ * de informacion en web esto es para el panel de administracion, aparecen todas
+ * las peticiones de vacaciones.
+ */
+
 $vacaciones = new vacaciones();
 
  if(isset($_SESSION['valido'])==1){
     if(!isset($_GET['q'])){
-        $q="";
+        $q=""; //Nombre del empleado
     } else {
-        $q=$_GET["q"];
+        $q=$_GET["q"]; //Nombre del empleado
     }
     if(!isset($_GET['f'])){
-        $f="";
+        $f=""; // estado
     } else {
-        $f=$_GET["f"];
+        $f=$_GET["f"]; // estado
  }
 $pdo = new conexion();
 if(!empty($f) && empty($q) ){

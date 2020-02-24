@@ -4,6 +4,10 @@ include '../addons/config.php';
 include '../class/conexion.php';
 $tipoArchivo =".". substr($_FILES['FotoEMP']['type'], 6);
 
+
+/** 
+ * validacion del formulario cambiar foto de perfil por cada empleado
+ */
 if(isset($_POST['GuardaFo'])){
     if($_FILES['FotoEMP']['error']>0){
         echo 'Error al cargar archivo';

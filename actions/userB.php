@@ -6,6 +6,12 @@ include '../class/empleado.php';
 $empleado = new empleado();
 
 
+/**
+ * Filtro de empleados para poder consultar sus datos desde una tabla se muetra
+ * el registro de todos y se realiza la paginacion para no saturar la pagina de
+ * informacion
+ */
+
 if(isset($_SESSION['valido'])==1){
 $q = null;
 $pdo = new conexion();

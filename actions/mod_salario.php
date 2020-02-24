@@ -5,6 +5,10 @@ include '../addons/config.php';
 
 $puesto = new puesto();
 
+/**
+ * Validacion para modificar los datos de los puestos desde el panel de 
+ * adminsitracion
+ */
 if(isset($_POST['modPuesto'])){
     $puesto->setNombrePuest($_POST['nomPuesto']);
     $puesto->setDescripcion($_POST['descPuest']);

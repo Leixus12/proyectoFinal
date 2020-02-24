@@ -6,6 +6,15 @@ include '../addons/config.php';
 include '../class/nomina.php';
 $nomina= new nomina();
 
+
+
+/**
+ * Se hace usa de Ajax para modificar las varibales e y p
+ * mediante una paginacion de elementos delimitados para evitar la sobre carga
+ * de informacion en web esto es para el panel de usuario, aparecen todas
+ * las nominas generadas, para consultar sus propias nominas.
+ */
+
 if(isset($_SESSION['valido'])==1){
     $q = null;
     $pdo = new conexion();

@@ -1,5 +1,11 @@
 <?php
     session_start();
+    
+    /**
+     * Validacion del formulario del panel de empleados para mandar solicitudes
+     * de vacaciones esta valida si tiene dias disponibles y que sea pedidas
+     * antes de 15 dias.
+     */
     include '../class/conexion.php';
     $idEmpleado=$_SESSION['idEmpleado'];
     include '../class/vacaciones.php';

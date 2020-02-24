@@ -6,6 +6,11 @@
  $empleado = new empleado();
 
  
+ /**
+  * Validacion del formulario del panel de administracion para registro de 
+  * nuevos empleados.
+  * 
+  */
 if (isset($_POST['okEmp'])){
     $empleado->setNombre($_POST['nomEmp']);
     $empleado->setApellidoPaterno($_POST['nomEmpP']);

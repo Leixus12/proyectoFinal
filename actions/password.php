@@ -1,4 +1,11 @@
 <?php
+
+
+/**
+ * Validacion del formulario de olvide contraseña, usa la libreria de correo 
+ * para enviar un nuevo codigo de verficacion le agrega un tiempo de expiracion
+ * de 15 minutos. 
+ */
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -42,6 +49,8 @@ $pass->inserCode();
 
 if($res == null){
 }else{
+    /** mensaje que se enviara mediante el correo en html.
+     */
     $nombreAu = 'Clinica Santa Barbara';
     $asunto = '[Clinica Santa Barbara]: instrucciones para cambiar tu contrasena';
     $mensaje =  '<p>Ha solicitado restablecer su contrase&ntilde;a para la '

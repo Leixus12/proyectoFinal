@@ -5,7 +5,13 @@ ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
 
-//variables que pasamos del formulario de IndexLogin
+
+
+/**
+ * variables que pasamos del formulario de IndexLogin
+ * para que haga la validacion del usuario si existe y consulta sus datos para
+ * ver que permisos sobre el sistema tiene
+ */
 $vPass='p';
 $vUser='u';
 $pass=$_POST['pwd'];
