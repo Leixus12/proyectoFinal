@@ -87,7 +87,7 @@ if($_SESSION['valido']==1 && $_SESSION['idPuesto']== 1 || $_SESSION['idPuesto']
             if ($percepciones[$i]->getHoraExtra() == null){}
             else{
                 $horasExtrT[$i] = "Horas Extra: ";
-                $horasExtr[$i]= $asistencia[$i]->horasExtra($idEmpleado[$i], 
+                $horasExtr[$i] = $asistencia[$i]->horasExtra($idEmpleado[$i], 
                 $nomina[$i]->getFechaInicial(), 
                 $nomina[$i]->getFechaFinal());
             }
@@ -410,7 +410,7 @@ if($_SESSION['valido']==1 && $_SESSION['idPuesto']== 1 || $_SESSION['idPuesto']
                                 .'/muRJMo0Pr3NXUp1zetvrMddx/DCqblWAU1zkv31qhJku
                                 w+xmmQU3DNMZGpr2iWJbMfIrfDlXb7CnrASUMtckUd
                                 v8g3bfUuKfjVWrEtI8Mf51QI51HlfJHxidmDHpDuds/'.
-                                $nomina->getIdNomina().'/uhXap93LBBnKNXizhi7unkS
+                                $nomina[$i]->getIdNomina().'/uhXap93LBBnKNXizhi7unkS
                                 KoTgIH43tNgh+k261jBrQe1H4HkTI8cBn8VK+sR4MwYbWT4Y
                                 da+Phq1jyXkufhmT4ALyJwe3VWpwvD2Nk9B4FJsBsgzwLta
                                 hvR5c/VKMoiM+42ozfdhD++rnT7V7wFUFz2m9'

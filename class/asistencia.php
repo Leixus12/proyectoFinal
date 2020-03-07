@@ -121,8 +121,8 @@ class asistencia {
 	$total_paginas = ceil($result_register / $por_pagina);
         $query = $pdo ->prepare("SELECT a.idAsistencia, a.Fecha, a.HoraEntrada,"
                 . "a.HoraSalida, e.nombre, e.apellidoPaterno, e.apellidoMaterno"
-                . "FROM asistencia a join empleado e on a.idEmpleado = "
-                . "e.idEmpleado ORDER BY a.idAsistencia DESC LIMIT ".$desde
+                . " FROM asistencia a join empleado e on a.idEmpleado = "
+                . "e.idEmpleado ORDER BY a.Fecha DESC LIMIT ".$desde
                 .",".$por_pagina.";");
         $query->execute();
 	$res = $query->fetchAll();
